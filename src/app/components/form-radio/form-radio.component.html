@@ -1,9 +1,8 @@
-<div [formGroup]="group">
+<div class="input-field-wrapper" [formGroup]="group">
   <label>{{ config.label }}</label>
-  <div *ngFor="let opt of config.options">
-    <input type="radio" [formControlName]="config.name" [value]="opt.key" />
-    <label>
-      {{ opt.label }}
-    </label>
-  </div>
+  <mat-radio-group [formControlName]="config.name">
+    <div *ngFor="let opt of config.options">
+      <mat-radio-button class="radio" [value]="opt.key">{{ opt.label }}</mat-radio-button>
+    </div>
+  </mat-radio-group>
 </div>

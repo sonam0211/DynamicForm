@@ -1,11 +1,19 @@
-<div class="app">
-  <div>
-    <button (click)="addInput()">Input Text Box</button>
-    <button (click)="addTextArea()">Input Text Area</button>
-    <button (click)="addCheckbox()">Checkbox</button>
-    <button (click)="addRadio()">Radio</button>
-    <button (click)="addButton()">Button</button>
-    <button (click)="reset()">Reset</button>
+<div class="app-container">
+  <div class="button-container">
+    <div class="button-wrapper">
+      <p class="header">Form Elements Toolbar</p>
+      <button mat-raised-button color="primary" (click)="addInput()">Input Text Box</button>
+      <button mat-raised-button color="primary" (click)="addTextArea()">Input Text Area</button>
+      <button mat-raised-button color="primary" (click)="addCheckbox()">Checkbox</button>
+      <button mat-raised-button color="primary" (click)="addRadio()">Radio</button>
+      <button mat-raised-button color="primary" (click)="addButton()">Button</button>
+    </div>
   </div>
-  <app-container [config]="config" [removeComponent]="removeComponent"></app-container>
+  <div class="field-wrapper">
+    <div class="header-wrapper">
+      <p>Editor View</p>
+      <button mat-raised-button color="warn" (click)="reset()">Reset</button>
+    </div>
+    <app-container [config]="config" [removeComponent]="removeComponent"></app-container>
+  </div>
 </div>

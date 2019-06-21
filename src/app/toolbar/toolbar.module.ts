@@ -8,6 +8,11 @@ import { FormButtonComponent } from '../components/form-button/form-button.compo
 import { DynamicFieldDirective } from '../components/dynamic-field.directive';
 import { FormRadioComponent } from '../components/form-radio/form-radio.component';
 import { FormCheckboxComponent } from '../components/form-checkbox/form-checkbox.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,15 @@ import { FormCheckboxComponent } from '../components/form-checkbox/form-checkbox
     FormRadioComponent,
     FormCheckboxComponent
   ],
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatIconModule,
+    MatInputModule
+  ],
   exports: [ContainerComponent],
   entryComponents: [
     FormButtonComponent,

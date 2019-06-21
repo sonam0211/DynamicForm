@@ -1,5 +1,5 @@
 <form [formGroup]="form">
   <ng-container *ngFor="let field of config; let i = index" dynamicField [config]="field" [group]="form">
-    <div><button (click)="remove(i)">Remove</button></div>
+    <button mat-icon-button color="warn" (click)="remove(i)"><mat-icon>close</mat-icon></button>
   </ng-container>
 </form>

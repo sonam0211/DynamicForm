@@ -1,6 +1,5 @@
-<div [formGroup]="group">
-  <label>
-    <input [formControlName]="config.name" type="checkbox" value="option1" />
-    {{ config.label }}</label
-  >
+<div class="input-field-wrapper" [formGroup]="group">
+  <mat-checkbox [formControlName]="config.name" type="checkbox" value="option1">
+    {{ config.label }}
+  </mat-checkbox>
 </div>

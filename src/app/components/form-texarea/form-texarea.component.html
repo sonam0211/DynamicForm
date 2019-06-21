@@ -1,4 +1,5 @@
-<div [formGroup]="group">
-  <label>{{ config.label }}</label>
-  <textarea rows="4" cols="50" [attr.placeholder]="config.placeholder" [formControlName]="config.name"></textarea>
+<div class="input-field-wrapper" [formGroup]="group">
+  <mat-form-field class="input-field-wrapper">
+    <textarea matInput value="" [placeholder]="config.placeholder" [formControlName]="config.name"></textarea>
+  </mat-form-field>
 </div>
